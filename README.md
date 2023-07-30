@@ -38,3 +38,15 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+Challenge #2: Refactoring "React Quiz" to Context API
+
+- Duplicate `src` folder to `src-no-context`
+- Review data flow and passed props
+- Identify prop drilling problem
+- Use the Context API to fix the (very small) prop drilling problem
+- Create a new context `QuizContext` with the reducer we created earlier
+- Create a custom provider component `QuizProvider` and provide all the state to the app
+- Create a custom hook to consume state all over the application
+- Delete all unecessary props
+- IMPORTANT: Note how you actually neeed state right in App component. This means you need to wrap the whole App into the context (HINT: try in index.js)
